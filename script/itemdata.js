@@ -15,7 +15,8 @@ async function fetchData() {
             fetch(urlTransaksi)
         ]);
 
-        menuData = await menuResponse.json();
+        const menuResponseData = await menuResponse.json();
+        menuData = menuResponseData.data;
         transaksiData = await transaksiResponse.json();
 
         renderMenu(menuData); 
@@ -251,8 +252,6 @@ function renderMenu(data) {
         document.getElementById('totalHarga').textContent = totalHarga;
     }
 }
-const ulasanAPI = "https://script.google.com/macros/s/AKfycbwiN_W2YFZC1_fHfL34_WG_3uMjduc6xOl13_VOyV7dtCC333enFeEk4I56XRYFeEoS/exec"; // Ganti dengan URL API Anda
-
 // Fungsi untuk memuat ulasan
 function loadUlasan() {
     fetch(`${url}?sheetName=Ulasan`) // Panggil API
