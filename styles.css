@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .card {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .form-check-input {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .form-check-label {
+    color: #ccc;
+}
+.sidebar {
+    background-color: #fff;
+    border-right: 1px solid #e9ecef;
+    height: 100vh;
+    padding: 20px;
+}
+.sidebar .nav-link {
+    color: #6c757d;
+    font-weight: 500;
+}
+.sidebar .nav-link.active {
+    color: #ff4d4f;
+}
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+.sidebar .nav-link span {
+    float: right;
+    background-color: #ff4d4f;
+    color: #fff;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+.sidebar .form-check-label {
+    color: #6c757d;
+}
+.content {
+    padding: 20px;
+}
+.content .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.content .search-bar input {
+    flex: 1;
+    border: 1px solid #e9ecef;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.content .search-bar i {
+    margin-left: 10px;
+    color: #6c757d;
+}
+.content .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.content .menu-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.content .menu-header p {
+    color: #6c757d;
+}
+.content .menu-header .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.content .menu-header .breadcrumb-item a {
+    color: #6c757d;
+}
+.content .menu-header .breadcrumb-item.active {
+    color: #000;
+}
+.content .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.content .menu-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+}
+.content .menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.content .menu-item h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.content .menu-item p {
+    color: #ff4d4f;
+    font-weight: 600;
+}
+.order-summary {
+    background-color: #fff;
+    border-left: 1px solid #e9ecef;
+    height: 100vh;
+    padding: 20px;
+}
+.order-summary h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.order-summary .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.order-summary .order-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.order-summary .order-item h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+.order-summary .order-item p {
+    color: #ff4d4f;
+    font-weight: 600;
+    margin: 0;
+}
+.order-summary .order-item .quantity {
+    display: flex;
+    align-items: center;
+}
+.order-summary .order-item .quantity input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.order-summary .order-item .quantity i {
+    color: #ff4d4f;
+    cursor: pointer;
+}
+.order-summary .order-total {
+    margin-top: 20px;
+}
+.order-summary .order-total p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-weight: 600;
+}
+.order-summary .order-total p span {
+    color: #6c757d;
+}
+.order-summary .order-total .total {
+    font-size: 18px;
+    font-weight: 700;
+}
+.order-summary .order-total .total span {
+    color: #000;
+}
+.myorderers{
+    position: sticky;
+    right: 0;
+    width: 30%;
+}
+.order-summary .print-bills {
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 15rem;
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    position:absolute;
+    bottom: 10px;
+    right: 0;
+}
+.total-harga {
+    color:red;
+    font-weight: bold;
+    position:absolute;
+    bottom: 100px;
+    right: 10px; 
+}
+.catatan{
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    width: 90%;
+    margin-inline: 5%;
+}
+
+.main-content1{
+    width: 82.5%;
+    background-image:url(image/backgroundMaskaan.jpg);
+    background-color: #cccccc;
+}
+
+.main-content1 .containers{
+    opacity: 1;
+}
+.hki{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.main-content3{
+    width: 82%;
+}
+.main-content3 .bg-custom3{
+    background-image: url(image/Coklat_logo.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.promo-card .card .card-body h5{
+    font-weight: bold;
+    font-size: large;
+}
+
+.main-content4{
+    background-color: #b9bdc2;
+    width: 80%;
+}

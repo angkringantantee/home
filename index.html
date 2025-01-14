@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Angkringan Tantee
+    </title>
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="container-fluid d-flex d-inline">
+        <!--Navigation-->
+        <div class="d-flex shadow" style="width: 20%;">
+            <nav class="sidebar">
+                <div class="d-flex align-items-center mb-4">
+                    <img alt="logo" class="me-2" src="image/logo.png" width="70px" height="70px" />
+                    <div>
+                        <h5 class="m-0">
+                            Angkringan
+                        </h5>
+                        <small>
+                            Tantee
+                        </small>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h6 class="text-uppercase">
+                        Menu
+                    </h6>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard" onclick="showContent('dashboard')">
+                            <i class="fas fa-tachometer-alt">
+                            </i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu" onclick="showContent('menu')">
+                            <i class="fas fa-utensils">
+                            </i>
+                            Menu
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#promotion" onclick="showContent('promotion')">
+                            <i class="fas fa-tags">
+                            </i>
+                            Promotion
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-4">
+                    <h6 class="text-uppercase">
+                        Pelanggan
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ulasan" onclick="showContent('ulasan')">
+                                <i class="fas fa-star">
+                                </i>
+                                Ulasan
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h6 class="text-uppercase">Tema</h6>
+                    <div class="d-flex gap-4">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" id="darkModeSwitch" type="checkbox" />
+                            <label class="form-check-label" for="darkModeSwitch">
+                                <i class="bi bi-moon-stars"></i>
+                                Dark
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" id="lightModeSwitch" type="checkbox" checked />
+                            <label class="form-check-label" for="lightModeSwitch">
+                                <i class="bi bi-brightness-high"></i>
+                                Light
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Main content 1-->
+        <div class="d-flex main-section main-content1" id="dashboard">
+            <div class="bg-secondary bg-opacity-75 p-3 m-5">
+                <!-- Menu Section -->
+                <div class="containers">
+                    <h2 class="text-center my-4 fw-bold text-black bg-white rounded-5 py-2">Menu Kami</h2>
+                    <div class="row">
+                        <div class="col-md-4 menu-item">
+                            <div class="card">
+                                <img src="image/logo-makanan.png" class="card-img-top" alt="Menu 1"
+                                    style="width: 15rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Makanan & Minuman</h5>
+                                    <p class="card-text">Kami menyediakan makanan dan minuman dengan harga yang ramah
+                                        dikantong.</p>
+                                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 menu-item">
+                            <div class="card">
+                                <img src="image/logo-higenis.jpg" class="card-img-top" alt="Menu 2"
+                                    style="width: 15rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Higenis</h5>
+                                    <p class="card-text">Kami bisa menjamin makanan yang disediakan di buat dengan cara
+                                        yang sehat</p>
+                                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 menu-item">
+                            <div class="card">
+                                <img src="image/logo-halal.jpg" class="card-img-top" alt="Menu 3"
+                                    style="width: 16.5rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Halal 100%</h5>
+                                    <p class="card-text">Makanan yang kami jual 100% halal</p>
+                                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="container bg-light bg-opacity-75 shadow p-3 mt-5" id="about">
+                    <h2 class="text-center my-4 fw-bold text-black">Tentang Kami</h2>
+                    <p class="text-center text-black">Kami adalah usaha makanan yang berkomitmen untuk menyajikan
+                        hidangan lezat
+                        dengan bahan-bahan segar. Kunjungi kami dan nikmati pengalaman kuliner yang tak terlupakan!</p>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="container bg-light bg-opacity-50 p-3 mt-5" id="contact">
+                    <h2 class="text-center my-4 ">Kontak Kami</h2>
+                    <h5>Email: </h5>
+                    <h5>Alamat: </h5>
+                </div>
+
+                <!-- Footer -->
+                <footer class="text-center mt-5 text-black fw-bold hki bg-secondary">
+                    <p>&copy; 2025 [Angkringan Tantee]. Semua hak dilindungi.</p>
+                </footer>
+            </div>
+        </div>
+        <!--end main 1-->
+
+        <!--Main content 2-->
+        <div class="d-none main-section main-content2" id="menu">
+            <main class="col-md-9 content">
+                <div class="search-bar">
+                    <input class="form-control" id="search-input" placeholder="Search menu..." type="text" />
+                    <i class="fas fa-search">
+                    </i>
+                </div>
+                <div class="menu-header">
+                    <div>
+                        <h1>
+                            MENU
+                        </h1>
+                        <p class="bi bi-funnel">Urutkan berdasarkan</p>
+                        <a class="btn btn-outline-primary sort-name-btn" href="#" role="button" data-order="asc">Nama
+                            <i class="bi bi-sort-alpha-down"></i>
+                        </a>
+                        <a class="btn btn-outline-primary sort-price-btn" href="#" role="button">Harga
+                            <i class="bi bi-sort-numeric-down"></i>
+                        </a>
+                        <a class="btn btn-outline-primary sort-order-btn" href="#" role="button">Penjualan
+                            <i class="bi bi-sort-down-alt"></i>
+                        </a>
+                        <a class="btn btn-outline-primary clear-btn" href="#" role="button">Clear Filter
+                            <i class="bi bi-sort-down-alt"></i>
+                        </a>
+                    </div>
+                    <nav aria-label="breadcrumb" class="me-5">
+                        <label for="kategori" class="w-75">Kategori</label>
+                        <select name="kategori" id="kategori">
+                            <option value="Semua" selected>Semua</option>
+                            <option value="Makanan">Makanan</option>
+                            <option value="Minuman">Minuman</option>
+                        </select>
+                    </nav>
+                </div>
+
+                <!--Menu Item-->
+                <div class="row row-cols-md-4 row-cols-3 gx-3 p-2" id="menu-item">
+                </div>
+            </main>
+
+            <!--Pesanan-->
+            <aside class="order-summary shadow mt-3 me-2 myorderers">
+                <h5>
+                    Pesanan Saya
+                </h5>
+                <div class="nama my-5">
+                    <label for="nama">Nama Anda</label>
+                    <input type="text" id="nama" class="w-100">
+                </div>
+                <table class="order-table table mb-5">
+                    <thead>
+                        <tr class="order-item head">
+                            <th>Aksi</th>
+                            <th>Menu</th>
+                            <th>Harga</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+                <div class="catatan my-5">
+                    <label for="catatan">Tambahkan Catatan</label>
+                    <input type="text" id="catatan" class="w-100">
+                </div>
+                <div class="mt-5 total-harga">
+                    <h6>Total harga: Rp. <span id="totalHarga">0</span></h6>
+                </div>
+                <button class="print-bills">
+                    Pesan Makanan
+                </button>
+            </aside>
+
+            <!--Modal Page-->
+            <div class="modal fade" id="printModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pesanan Saya</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>Pesanan:</h6>
+                            <div class="d-flex">
+                                <h6>Nama: <span id="modalNama"></span></h6>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Menu</th>
+                                        <th>Harga</th>
+                                        <th>Qty</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modalOrderDetails">
+                                    <!-- Order details will be injected here -->
+                                </tbody>
+                            </table>
+                            <div>
+                                <h6>Catatan:</h6>
+                                <p id="modalCatatan"></p>
+                            </div>
+                            <h6>Total Harga: Rp. <span id="modalTotalHarga"></span></h6>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primary btn-save">Print</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--end main 2-->
+
+        <!--Main conten 3-->
+        <div class="d-none main-section main-content3" id="promotion">
+            <div class="d-flex-none bg-custom3">
+                <!-- Hero Section -->
+                <div class="hero bg-secondary bg-opacity-75">
+                    <h1 class="text-black fw-bold text-center">Penawaran Spesial di Angkringan Tantee</h1>
+                    <p class="text-center fw-4">Jangan lewatkan kesempatan menarik ini!</p>
+                </div>
+
+                <!-- Promo Section -->
+                <div class="container bg-light bg-opacity-50 p-5" id="promo">
+                    <h2 class="text-center my-4 text-black fw-bolder">Promosi Terbaru</h2>
+                    <div class="row">
+                        <div class="col-md-4 promo-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Diskon 20% untuk Pembelian Menggunakan Qris</h5>
+                                    <p class="card-text">Nikmati diskon spesial kami sebesar 20% setiap hari jumat
+                                        dengan menggunakan Qris!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 promo-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beli 2 Lauk Gratis Tambah Nasi</h5>
+                                    <p class="card-text">Dapatkan 1 bungkus nasi gratis setiap pembelian 2 buah lauk!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 promo-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cashback 15% menggunakan Shopeepay</h5>
+                                    <p class="card-text">Dapatkan cashback hingga 15% dengan pembayaran menggunakan
+                                        shopeepay</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-4 promo-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Diskon 10% menggunakan ovo</h5>
+                                        <p class="card-text">Setiap pembelian menggunakan ovo akan mendapatkan cashback
+                                            hingga 10%
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 promo-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Beli 2 buah minuman gratis 1</h5>
+                                        <p class="card-text">Dapatkan gratis minuman segar setiap pembelian 2 buah
+                                            minuman dengan harga 10.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 promo-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Diskon 10% Nasi Ayam Bakar</h5>
+                                        <p class="card-text">Setiap senin dan kamis kami berikan diskon 10% untuk
+                                            pembelian <b>nasi ayam bakar</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="text-center mt-5 text-black fw-bold hki bg-secondary">
+                    <p>&copy; 2025 [Angkringan Tantee]. Semua hak dilindungi.</p>
+                </footer>
+            </div>
+        </div>
+        <!--end main 3-->
+
+        <!--Main conten 4-->
+        <div class="d-none main-section main-content4" id="ulasan">
+            <div class="d-flex-none p-3 mx-5 bg-secondary bg-opacity-50 " style="width:75vw">
+                <!-- Hero Section -->
+                <div class="jumbotron text-center">
+                    <h1 class="display-4">Ulasan Pelanggan</h1>
+                    <p class="lead">Apa kata pelanggan tentang Angkringan Tanteen?</p>
+                </div>
+
+                <!-- Review Section -->
+                <div class="container" id="reviews">
+                    <h2 class="text-center my-4">Ulasan Terbaru</h2>
+                    <div class="row" id="reviewCards">
+                        <!-- Ulasan akan diisi melalui JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="container" id="contact">
+                    <h2 class="text-center my-4">Tinggalkan Ulasan Anda</h2>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="tanggal">Tanggal</label><br>
+                            <input type="date" id="tanggal" rows="3" placeholder="Isi Tanggal">
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating</label>
+                            <select class="form-control" id="rating" required>
+                                <option value="">Pilih Rating</option>
+                                <option value="5">⭐⭐⭐⭐⭐</option>
+                                <option value="4">⭐⭐⭐⭐</option>
+                                <option value="3">⭐⭐⭐</option>
+                                <option value="2">⭐⭐</option>
+                                <option value="1">⭐</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Ulasan</label>
+                            <textarea class="form-control" id="review" rows="3" placeholder="Tulis ulasan Anda"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Ulasan</button>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <footer class="text-center py-4">
+                    <p>&copy; 2023 [Nama Usaha Makanan]. Semua hak dilindungi.</p>
+                </footer>
+            </div>
+        </div>
+        <!--end main 4-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/itemdata.js"></script>
+    <script src="script/theme.js"></script>
+    <script src="script/postData.js"></script>
+    <script src="script/pageController.js"></script>
+</body>
+
+</html>
