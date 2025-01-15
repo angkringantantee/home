@@ -18,6 +18,7 @@ async function fetchData() {
         const menuResponseData = await menuResponse.json();
         menuData = menuResponseData.data;
         transaksiData = await transaksiResponse.json();
+        const transaksiArray = transaksiData.data;
 
         renderMenu(menuData); 
 
@@ -74,28 +75,32 @@ async function fetchData() {
         // Sort berdasarkan jumlah pesanan
         document.querySelector('.sort-order-btn').addEventListener('click', function (event) {
             event.preventDefault();
-
+        
+            // Validasi dan ambil array dari transaksiData
+            const transaksiArray = transaksiData?.data || [];
+            if (!Array.isArray(transaksiArray)) {
+                console.error("transaksiArray bukan array:", transaksiArray);
+                return;
+            }
+        
             // Hitung jumlah pesanan per menu
             const menuOrderCount = {};
-
-            transaksiData.forEach(item => {
+            transaksiArray.forEach(item => {
                 const menu = item["Menu"];
-                const jumlahPesanan = item["JumlahPesanan"];
-                if (menuOrderCount[menu]) {
-                    menuOrderCount[menu] += jumlahPesanan;
-                } else {
-                    menuOrderCount[menu] = jumlahPesanan;
-                }
+                const jumlahPesanan = parseInt(item["JumlahPesanan"], 10); // Pastikan jumlah adalah angka
+                menuOrderCount[menu] = (menuOrderCount[menu] || 0) + jumlahPesanan;
             });
-
-            // Tambahkan jumlah pesanan ke data menu
-            const sortedData = [...menuData].map(item => {
-                item["JumlahPesanan"] = menuOrderCount[item["Nama Menu"]] || 0;
-                return item;
-            }).sort((a, b) => b["JumlahPesanan"] - a["JumlahPesanan"]); // Urutkan berdasarkan jumlah pesanan tertinggi
-
+        
+            // Tambahkan jumlah pesanan ke data menu dan urutkan
+            const sortedData = [...menuData].map(item => ({
+                ...item,
+                JumlahPesanan: menuOrderCount[item["Nama Menu"]] || 0
+            })).sort((a, b) => b["JumlahPesanan"] - a["JumlahPesanan"]);
+        
+            // Render menu berdasarkan data yang sudah diurutkan
             renderMenu(sortedData);
         });
+        
 
         // Clear Filter
         document.querySelector('.clear-btn').addEventListener('click', function (event) {
@@ -136,7 +141,7 @@ function renderMenu(data) {
             const cardHTML = `
                 <div class="col mb-5">
                     <div class="card">
-                        <img src="${gambar}" class="card-img-top object-fit-fill border rounded mx-2 mt-2 mb-3" alt="${menu}" style="width:150px; height:150px;">
+                        <img src="${gambar}" class="card-img-top object-fit-fill border rounded m-1" alt="${menu}" style="width:150px; height:150px;">
                         <div class="card-body">
                             <h5 class="card-title text-capitalize">${menu}</h5>
                             <div class="card-text mb-3">
@@ -291,6 +296,7 @@ function loadUlasan() {
             console.error("Error:", error);
         });
 }
+
 
 // Panggil fungsi saat halaman dimuat
 document.addEventListener("DOMContentLoaded", loadUlasan);
