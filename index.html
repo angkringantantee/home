@@ -13,7 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
-    
+
 </head>
 
 <body class="overflow-x-hidden">
@@ -212,39 +212,40 @@
             </main>
 
             <!--Pesanan-->
-            <aside class="order-summary shadow mt-3 me-2 myorderers">
-                <h5>
-                    Pesanan Saya
-                </h5>
-                <div class="nama my-5">
-                    <label for="nama">Nama Anda</label>
-                    <input type="text" id="nama" class="w-100">
-                </div>
-                <table class="order-table table mb-5">
-                    <thead>
-                        <tr class="order-item head">
-                            <th>Aksi</th>
-                            <th>Menu</th>
-                            <th>Harga</th>
-                            <th>Qty</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <aside class="bg-light order-summary mt-3 me-2 myorderers">
+                <div class="order-sum">
+                    <h5>
+                        Pesanan Saya
+                    </h5>
+                    <div class="nama my-5">
+                        <label for="nama">Nama Anda</label>
+                        <input type="text" id="nama" class="w-100">
+                    </div>
+                    <table class="order-table table mb-1">
+                        <thead>
+                            <tr class="order-item head">
+                                <th>Aksi</th>
+                                <th>Menu</th>
+                                <th>Harga</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                    </tbody>
-                </table>
-
-                <div class="catatan my-5">
-                    <label for="catatan">Tambahkan Catatan</label>
-                    <input type="text" id="catatan" class="w-100">
-                </div>
-                <div class="mt-5 total-harga">
-                    <h6>Total harga: Rp. <span id="totalHarga">0</span></h6>
-                </div>
-                <button class="print-bills">
-                    Pesan Makanan
-                </button>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="catatan my-5">
+                        <label for="catatan">Tambahkan Catatan</label>
+                        <input type="text" id="catatan" class="w-100">
+                    </div>
+                    <div class="mt-5 total-harga">
+                        <h6>Total harga: Rp. <span id="totalHarga">0</span></h6>
+                    </div>
+                    <button class="print-bills">
+                        Pesan Makanan
+                    </button>
             </aside>
 
             <!--Modal Page-->
