@@ -50,7 +50,7 @@ body.dark-mode .form-check-label {
     color: #6c757d;
 }
 .content {
-    padding: 20px;
+    padding: 10px;
 }
 .content .search-bar {
     display: flex;
@@ -209,6 +209,8 @@ body.dark-mode .form-check-label {
     bottom: 10px;
     right: 0;
 }
+
+
 .total-harga {
     color:red;
     font-weight: bold;
